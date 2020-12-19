@@ -1,0 +1,21 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    background-color: black;
+    padding: 20px;
+}
+.board {
+    color: whitesmoke;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.rectangle {
+    width:100%;
+    height: 150px;
+    --start: hsl(0, 100%, 50%);
+    --end: hsl(322,100%, 50%);
+    background-image: linear-gradient(-135deg, var(--start), var(--end)); 
+}
