@@ -4,7 +4,13 @@
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./indexstyle.css" type="text/css" media="screen">
   <script src="ch02_sec23.js" defer></script>
-  <script src="ch02_sec25.js" defer></script>
+  <!-- <script src="ch02_sec25.js" defer></script> -->
+  <script src="ch02_sec27.js" defer></script>
+  <script src="ch02_sec31.js" defer></script>
+  <script src="ch02_sec34.js" defer></script>
+  <script src="ch02_sec36.js" defer></script>
+  <script src="ch02_sec40.js" defer></script>
+  <script src="ch02_sec41.js" defer></script>
   <title>Javascript Basic Steps</title>
 </head>
 <body>
@@ -13,10 +19,109 @@
     <button class="button1">Change Colour</button>
     <div class="rectangle"></div>
   </div>
+  <!-- 
   <div class="board">
     <h3>2. Triangular Function</h3>
-    <button class="button2">Refresh!</button>
-    <div class="character"></div>
+    <button class="button2">Start!</button>
+    <div class="character"><img src="./sampleimgs/dashboard_black.png" width=50 /></div>
+  </div>
+  -->
+  <div class="board">
+    <h3>3. Checking the length of String</h3>
+    <button class="button3">Check!</button>
+    <textarea class="textarea"></textarea>
+    <p>You've input <span class="string_num">0</span> characters.</p>
+  </div>
+  <div class="board">
+    <h3>4. Search the same first letter as the user input</h3>
+    <div class="blklabel">
+      <label>Please input the 1st letter of the city. <input id="search-word-input" maxlength="1" type="text"></label>
+      <button class="button4">find!</button>
+    </div>
+    <div id="region-list">
+      <button data-name="속초" data-phonetic="sokcho">속초</button>
+      <button data-name="부산" data-phonetic="busan">부산</button>
+      <button data-name="포항" data-phonetic="pohang">포항</button>
+      <button data-name="상주" data-phonetic="sangju">상주</button>
+      <button data-name="서울" data-phonetic="seoul">서울</button>
+      <button data-name="제주" data-phonetic="jeju">제주</button>
+      <button data-name="김해" data-phonetic="kimhae">김해</button>
+      <button data-name="대구" data-phonetic="daegu">대구</button>
+      <button data-name="울산" data-phonetic="ulsan">울산</button>
+      <button data-name="창원" data-phonetic="changwon">창원</button>
+      <button data-name="마산" data-phonetic="masan">마산</button>
+      <button data-name="인천" data-phonetic="incheon">인천</button>
+      <button data-name="평택" data-phonetic="pyeongtaek">평택</button>
+      <button data-name="의정부" data-phonetic="uijeongbu">의정부</button>
+      <button data-name="고양" data-phonetic="goyang">고양</button>
+      <button data-name="성남" data-phonetic="seongnam">성남</button>
+      <button data-name="용인" data-phonetic="yongin">용인</button>
+      <button data-name="부천" data-phonetic="bucheon">부천</button>
+      <button data-name="안산" data-phonetic="ansan">안산</button>
+      <button data-name="남양주" data-phonetic="namyangju">남양주</button>
+      <button data-name="시흥" data-phonetic="siheong">시흥</button>
+      <button data-name="파주" data-phonetic="paju">파주</button>
+      <button data-name="김포" data-phonetic="kimpo">김포</button>
+      <button data-name="광명" data-phonetic="kwangmyeong">광명</button>
+      <button data-name="군포" data-phonetic="gunpo">군포</button>
+      <button data-name="이천" data-phonetic="icheon">이천</button>
+      <button data-name="하남" data-phonetic="hanam">하남</button>
+      <button data-name="과천" data-phonetic="gwacheon">과천</button>
+      <button data-name="전주" data-phonetic="jeonju">전주</button>
+      <button data-name="군산" data-phonetic="gunsan">군산</button>
+      <button data-name="목포" data-phonetic="mokpo">목포</button>
+      <button data-name="나주" data-phonetic="naju">나주</button>
+      <button data-name="광양" data-phonetic="gwangyang">광양</button>
+      <button data-name="춘천" data-phonetic="chuncheon">춘천</button>
+      <button data-name="원주" data-phonetic="wonju">원주</button>
+      <button data-name="사천" data-phonetic="sacheon">사천</button>
+      <button data-name="광주" data-phonetic="gwangju">광주</button>
+      <button data-name="구리" data-phonetic="guri">구리</button>
+      <button data-name="삼척" data-phonetic="samcheok">삼척</button>
+      <button data-name="당진" data-phonetic="dangjin">당진</button>
+      <button data-name="공주" data-phonetic="gonju">공주</button>
+      <button data-name="천안" data-phonetic="cheonan">천안</button>
+      <button data-name="부천" data-phonetic="bucheon">부천</button>
+      <button data-name="수원" data-phonetic="suwon">수원</button>
+      <button data-name="세종" data-phonetic="sejong">세종</button>
+      <button data-name="대전" data-phonetic="daejeon">대전</button>
+      <button data-name="충주" data-phonetic="chungju">충주</button>
+    </div>
+  </div>
+  <div class="board">
+    <h3>5. Altering specific char into another</h3>
+    <div class="telphone">
+      <h4>Please input your mobile number.</h4>
+      <input id="mobnum" type="text"><br>
+      <button class="button5" type="submit">Send!</button>
+    </div>
+  </div>
+  <div class="board">
+    <h3>6. Combining 2 Strings into 1</h3>
+    <div class="name_container">
+      <label>성 : <input id="familyName" type="text"></label>
+      <label>이름 : <input id="firstName" type="text"></label>
+      <button class="button6">Combine!</button>
+    </div>
+    <p id="fullName"></p>
+  </div>
+  <div class="board">
+    <h3>7. Verifying the compability of Strings</h3>
+    <div class="telphone">
+      <h4>Please input your mobile number.</h4>
+      <input id="mobnum2" type="text"><br>
+      <p id="warningMsg"></p>
+    </div>
+  </div>
+  <div class="board">
+    <h3>8. Timer</h3>
+    <div>
+      <input id="secs" type="text"> secs<br>
+      <button class="button8">Start!</button>
+    </div>
+    <p id="inputSec"></p>
+    <p id="seconds"></p>
+    </div>
   </div>
 </body>
 </html>
